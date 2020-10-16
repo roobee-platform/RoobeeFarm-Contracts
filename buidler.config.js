@@ -1,5 +1,6 @@
 usePlugin("@nomiclabs/buidler-waffle");
-
+require("dotenv").config();
+usePlugin("@nomiclabs/buidler-etherscan");
 
 
 
@@ -17,8 +18,6 @@ task("deploy-RoobeeFarm", "Deploys the RoobeeFarm contract", async () => {
   console.log("RoobeeFarm deployed to:", roobeeFarm.address);
 });
 
-task("init RoobeeFarm", "initializes RoobeeFarm's params")
-    .addParam(roobee)
 
 // You have to export an object to set up your config
 // This object can have the following optional entries:
@@ -29,4 +28,22 @@ module.exports = {
   solc: {
     version: "0.6.8",
   },
+  networks: {
+    buidlerevm: {
+      gasPrice: 0,
+      blockGasLimit: 100000000,
+    },
+    kovan: {
+      url: `https://kovan.infura.io/v3/${INFURA_API_KEY}`,
+      accounts: [KOVAN_PRIVATE_KEY]
+    }
+  },
+  etherscan: {
+    // The url for the Etherscan API you want to use.
+    //@ts-ignore
+    url: "https://api-rinkeby.etherscan.io/api",
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: ETHERSCAN_API_KEY
+  }
 };
