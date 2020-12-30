@@ -3,5 +3,5 @@
 ### Deploy
 
 ```
-npx buidle run scripts/deploy.js -- network [your network]
+npx buidler run scripts/deploy.js -- network [your network]
 ```
