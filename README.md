@@ -1,6 +1,6 @@
 # Roobee Farm
 
-Copy example.env to a new file called .env and edit the values in it.
+ Сreate a new file called .env and set the values in it.
 
 ### Compile
 
