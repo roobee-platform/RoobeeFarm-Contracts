@@ -1,5 +1,7 @@
 # Roobee Farm
 
+Copy example.env to a new file called .env and edit the values in it.
+
 ### Compile
 
 ```
