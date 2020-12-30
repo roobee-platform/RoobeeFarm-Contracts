@@ -1,5 +1,11 @@
 # Roobee Farm
 
+### Compile
+
+```
+npx buidler compile
+```
+
 ### Deploy
 
 ```
